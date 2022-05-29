@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script src="js/jquery.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/findShapeIndex.js"></script>
+<script src="js/MorphSVGPlugin.min.js"></script>
+<title>샌드박스</title>
+<style>
+	svg {
+	  display: block;
+	  margin: 20px auto;
+	  width:50%;
+	}
+	#second, #third, #fourth {visibility:hidden;}
+</style>
+<script>
+ window.onload = function(){
+	var tl = new TimelineMax({ repeat: -1 });
+	var t2 = new TimelineMax({ repeat: -1 });
+	var t3 = new TimelineMax({ repeat: -1 });
+	tl.add(TweenMax.to("#first .cls-1", 4, { morphSVG: "#second .cls-1", repeat: 0, shapeIndex: -3 },{fill:"red"}));
+	tl.add(TweenMax.to("#first .cls-1", 4, { morphSVG: "#third .cls-1" }));
+	tl.add(TweenMax.to("#first .cls-1", 4, { morphSVG: "#fourth .cls-1" }));
+	tl.add(TweenMax.to("#first .cls-1", 4, { morphSVG: "#first .cls-1" }));
+
+	t2.add(TweenMax.to("#first .cls-2", 4, { morphSVG: "#second .cls-2", repeat: 0, shapeIndex: -3 }));
+	t2.add(TweenMax.to("#first .cls-2", 4, { morphSVG: "#third .cls-2" }));
+	t2.add(TweenMax.to("#first .cls-2", 4, { morphSVG: "#fourth .cls-2" }));
+	t2.add(TweenMax.to("#first .cls-2", 4, { morphSVG: "#first .cls-2" }));
+
+	t3.add(TweenMax.to("#first .cls-3", 4, { morphSVG: "#second .cls-3", repeat: 0, shapeIndex: -3 }));
+	t3.add(TweenMax.to("#first .cls-3", 4, { morphSVG: "#third .cls-3" }));
+	t3.add(TweenMax.to("#first .cls-3", 4, { morphSVG: "#fourth .cls-3" }));
+	t3.add(TweenMax.to("#first .cls-3", 4, { morphSVG: "#first .cls-3" }));
+	
+}
+ 
+ 
+</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920"><defs><style>.cls-1{fill:#d3d3d3;}.cls-2{fill:#e2e2e4;}.cls-3{fill:#efefef;}</style></defs>
+	<g id="first" data-name="레이어 2"><g id="레이어_1-2" data-name="레이어 1">
+		<path class="cls-1" d="M244.96 86.65 0 821.53 699.89 1129.82 944.85 394.94 244.96 86.65z"/>
+		<path class="cls-2" d="M1021.5 1043.17 1266.46 308.28 944.85 394.94 699.89 1129.82 1021.5 1043.17z"/>
+		<path class="cls-3" d="M566.58 0 244.96 86.65 944.85 394.94 1266.46 308.28 566.58 0z"/>
+	</g></g>
+	<g id="second" data-name="레이어 2"><g id="레이어_1-2" data-name="레이어 1">
+		<path class="cls-1" d="M976 972 976 353.33 37.33 97.33 0 349.78 976 972z"/>
+		<path class="cls-2" d="M976 972 976 353.33 1914.67 97.33 1952 349.78 976 972z"/>
+		<path class="cls-3" d="M37.33 97.33 976 0 1914.67 97.33 976 353.33 37.33 97.33"/>
+	</g></g>
+	<g id="third" data-name="레이어 2"><g id="_Layer_" data-name="<Layer>">
+		<path class="cls-1" d="M745.4 818.9 793.99 627.85 5.48 16.26 0 154.74 745.4 818.9z"/>
+		<path class="cls-2" d="M745.4 818.9 793.99 627.85 1994.35 276.85 1964.38 883.3 745.4 818.9z"/>
+		<path class="cls-3" d="M793.99 627.85 1994.35 276.85 1344.17 0 5.48 16.26 793.99 627.85z"/>
+	</g></g>
+	<g id="fourth" data-name="레이어 2"><g id="_Layer_" data-name="<Layer>">
+		<path class="cls-1" d="M231.51 1013.63 0 506.81 525.58 760.22 757.09 1267.03 231.51 1013.63z"/>
+		<path class="cls-2" d="M500.58 760.22 757.09 1267.03 1249.83 760.22 1018.32 253.41 500.58 760.22z"/>
+		<path class="cls-3" d="M492.74 0 0 506.81 525.58 760.22 1018.32 253.41 492.74 0z"/>
+	</g></g>
+</svg>
+</body>
+</html>
+
+
